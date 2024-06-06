@@ -26,3 +26,5 @@ router
     router.resource('urls', UrlsController).apiOnly()
   })
   .prefix('api/v1')
+
+router.get('/r/:id', [UrlsController, 'redirect'])
